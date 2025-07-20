@@ -487,6 +487,55 @@ nav a.active::after {
 
 
 
+@media (max-width: 768px) {
+  .difference-section {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .difference-section .content {
+    padding: 20px;
+    margin-top: 40px;
+  }
+
+  .difference-section h1 {
+    font-size: 28px;
+  }
+
+  .difference-section p {
+    font-size: 14px;
+  }
+
+  .video-cards {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .video-card {
+    max-width: 100%;
+  }
+
+  .thumb {
+    width: 100%;
+    height: 150PX;
+  }
+
+  .thumb img {
+    height: auto;
+  }
+
+  .play-btn {
+    font-size: 18px;
+    padding: 10px 12px;
+  }
+}
+
+
 
   /* Pricing Section */
   .pricing-section {
@@ -520,7 +569,7 @@ nav a.active::after {
   }
   
   .toggle.active {
-    background-color: #1100ff;
+    background-color: #6200ff;
     color: #ffffff;
     border-radius: 30px;
   }
@@ -684,13 +733,14 @@ nav a.active::after {
     align-items: center;
     position: relative;
     min-height: 100vh;
-    padding: 80px 0px;
+    width: 1500px;
+    padding: 100px 0px;
     overflow: hidden;
   }
   
   /* Left Side Triangle Background */
   .trainers-left {
-    width: 70%;
+    width: 100%;
     height: 700px;
     padding-top: 250px;
     padding-left: 30px;
@@ -728,86 +778,125 @@ nav a.active::after {
   
   /* Right Side Cards */
   .trainers-right {
-    width: 50%;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    align-items: flex-start;
-    gap:20px;
-    margin-left: -100px; /* Pull into the visible area outside triangle */
-    z-index: 3;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the cards */
+    gap: 0px;
     position: relative;
+    z-index: 3;
+    padding: 40px 20px;
+    margin-left: 0px;
+    margin-right: 100px;
   }
   
   .trainer-card {
-    background: #1a1a1a;
+    background: rgb(36, 36, 36);
     border-radius: 30px;
     overflow: hidden;
-    width: 220px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease;
+    cursor: pointer;
+    margin-left: 0;
+  }
+
+  .trainer1{
+    width: 320px;
+    height: 480px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.521);
+    
+  }
+  .trainer2{
+    width: 300px;
+    height: 420px;
+    margin-top: 30px;
   }
   
   .trainer-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
   }
   
   .trainer-card img {
     width: 100%;
-    height: 260px;
+    height: 250px;
     object-fit: cover;
+    border-bottom: 2px solid #333;
+    margin-left: 0px;
+    
   }
   
+  .trainer1 img{
+     height: 400px;
+  }
+  
+  .trainer2 img{
+    height: 345px;
+    margin-left: 40px;
+  }
   .trainer-info {
-    padding: 20px 10px;
+    padding: 3px;
     text-align: center;
+    margin-top: 0px;
   }
   
   .trainer-info h3 {
     font-size: 1.2rem;
-    margin: 0;
+    margin-bottom: 10px;
+    color: #fff;
   }
   
   .trainer-info span {
     color: #aaa;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+  }
+
+  .trainer-card:nth-child(1) {
+    z-index: 2; /* on top */
+    position: relative;
   }
   
+
+  .trainer-card:nth-child(2) {
+    margin-left: -70px; /* or try margin-top: -40px for vertical offset */
+    z-index: 1; /* behind */
+    position: relative;
+  }
   
+      
   @media (max-width: 768px) {
-    .trainers-container {
+    .trainers-section {
       display: flex;
-      flex-direction: column; /* Stack children vertically */
-      padding: 20px 10px;
-      background: linear-gradient(to right, #000, #6b00b6);
+      justify-content: space-between;
       align-items: center;
+      position: relative;
+      min-height: 100vh;
+      width: 100%;
+      padding: 100px 0px;
+      overflow: hidden;
     }
-  
+    
     .trainers-left {
-      width: 1000px;
-      height: auto;
-      clip-path: none;
-      background: linear-gradient(to left, #000, #6b00b6);
-      text-align: center;
-      padding: 20px;
-      order: 1; /* Appears first */
+      width: 100%;
+      height: 700px;
+      padding-top: 250px;
+      padding-left: 30px;
+      background: linear-gradient(to bottom right, #6b00b6, #000);
+      clip-path: polygon(0 0, 100% 50%, 0 100%);
+      z-index: 2;
     }
-  
+    
     .trainers-right {
       display: none;
-      
     }
   
-    .trainer-card {
-      background: #1a1a1a;
-      border-radius: 30px;
-      overflow: hidden;
-      width: 90%;
-      max-width: 300px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-      transition: transform 0.3s ease;
-    }
+  
+    
+  
   }
-
-
+  
 
 
   
