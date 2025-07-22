@@ -81,6 +81,7 @@ nav a.active::after {
   border-radius: 30px;
   background-color: #5600f7;
   margin-left: 20px;
+  text-decoration: none;
 }
 /* Menu Toggle (Hamburger) */
 .menu-toggle {
@@ -159,8 +160,11 @@ nav a.active::after {
   display: flex;
   align-items: center;
   gap: 30px;
+  text-decoration: none;
 }
-
+.btn-row{
+  text-decoration: none;
+}
 .join-btn {
   padding: 15px 35px;
   background: linear-gradient(to right, #9c27b0, #6600DD);
@@ -1043,6 +1047,19 @@ nav a.active::after {
   
 
 
+
+  @media (max-width: 768px) {
+    .contact-card {
+      margin: 0 10px;
+      max-width: 900px;
+      height: 600px;
+      border-radius: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    
+  }
 
 
 

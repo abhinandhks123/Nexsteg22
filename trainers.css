@@ -815,3 +815,17 @@ nav a.active::after {
     margin-top: 20px;
     margin-bottom: 10px;
   }
+
+
+  @media (max-width: 768px) {
+    .contact-card {
+      margin: 0 10px;
+      max-width: 900px;
+      height: 600px;
+      border-radius: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    
+  }
