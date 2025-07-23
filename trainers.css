@@ -343,7 +343,7 @@ nav a.active::after {
     font-size: 14px;
   }
   .vision-text p{
-    margin-top: 20px;
+    margin-top: 30px;
   }
 
   .vision-video iframe{
@@ -527,18 +527,19 @@ nav a.active::after {
     .trainer-cards {
       flex-direction: column;
       align-items: center;
-      padding: 30px;
+      padding: 30px ;
     }
   
     .trainer-card {
       width: 90%;
       max-width: 320px;
+      height: auto;
 
     }
   
     .trainer-image,
     .trainer-image img {
-      height: 250px;
+      height: 300px;
     }
 
   
@@ -597,7 +598,7 @@ nav a.active::after {
 
   .success-section {
     position: relative;
-    padding: 10px 40px;
+    padding: 10px 30px;
   }
   
  
